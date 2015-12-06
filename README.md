@@ -1,14 +1,16 @@
 # FaceTracker
 
-Forked from Auduno's [clmtrackr](https://github.com/auduno/clmtrackr)
+Forked from Auduno's [clmtrackr](https://github.com/auduno/clmtrackr), read more about it in [this blog post](http://auduno.com/post/61888277175/fitting-faces)
 
 ![sad face](https://raw.githubusercontent.com/CodeAndCake/AppsFromScratch/v2/sessions/05/assets/sad-face.png)
 
-**FaceTracker** is a JavaScript library for fitting facial models to faces in videos or images. It currently is an implementation of *constrained local models* fitted by *regularized landmark mean-shift*, as described in [Jason M. Saragih's paper](http://dl.acm.org/citation.cfm?id=1938021). **FaceTracker** tracks a face and outputs the coordinate positions of the face model as an array, following the numbering of the model below:
+**FaceTracker** is a JavaScript library for fitting facial models to faces in videos or images. It currently is an implementation of *constrained local models* fitted by *regularized landmark mean-shift*, as described in [Jason M. Saragih's paper](http://dl.acm.org/citation.cfm?id=1938021). 
+
+**FaceTracker** tracks a face and outputs the coordinate positions of the face model as an array, following the numbering of the model below:
 
 [![facemodel_numbering](https://matteomenapace.github.io/FaceTracker/media/facemodel_numbering_new_small.png)](https://matteomenapace.github.io/FaceTracker/media/facemodel_numbering_new.png)
 
-[Reference](https://matteomenapace.github.io/FaceTracker/docs/reference.html) - [Overview](http://auduno.tumblr.com/post/61888277175/fitting-faces)
+#### [Docs](https://matteomenapace.github.io/FaceTracker/docs/reference.html)
 
 The library provides some generic face models that were trained on [the MUCT database](http://www.milbo.org/muct/) and some additional self-annotated images. Check out [clmtools](https://github.com/auduno/clmtools) for building your own models.
 
@@ -30,7 +32,7 @@ For some more information about Constrained Local Models, take a look at Xiaogua
 
 ### Usage ###
 
-Download the minified library [FaceTracker.js](https://github.com/matteomenapace/FaceTracker/raw/dev/clmtrackr.js) and one of the models, and include them in your webpage. **FaceTracker** depends on [*numeric.js*](https://github.com/sloisel/numeric/) and [*jsfeat.js*](https://github.com/inspirit/jsfeat), but these are included in the minified library.
+Download the minified library [clmtrackr.js](https://github.com/matteomenapace/FaceTracker/raw/dev/clmtrackr.js) and one of the models, and include them in your webpage. **FaceTracker** depends on [*numeric.js*](https://github.com/sloisel/numeric/) and [*jsfeat.js*](https://github.com/inspirit/jsfeat), but these are included in the minified library.
 
 ```html
 /* FaceTracker libraries */
