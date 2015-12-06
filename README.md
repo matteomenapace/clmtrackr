@@ -87,11 +87,12 @@ See the complete example [here](http://auduno.github.com/clmtrackr/example.html)
 ### Inspiring forks
 
 - https://github.com/DraXus/clmtrackr implemented a feature to manually select the _face box_.
-- 
 
 ### Potential issues
 
 - `getUserMedia()` no longer works on insecure origins in Chrome. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
+  
+  - Looks like Github Pages now supports HTTPS, see [this](https://konklone.com/post/github-pages-now-sorta-supports-https-so-use-it) and [this (with extra steps for Jekyll blogs)](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)
 
 ### License ###
 
