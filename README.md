@@ -84,6 +84,10 @@ You can also use the built in function ```draw()``` to draw the tracked facial m
 
 See the complete example [here](http://auduno.github.com/clmtrackr/example.html).
 
+### Inspiring forks
+
+- https://github.com/DraXus/clmtrackr
+
 ### License ###
 
 **clmtrackr** is distributed under the [MIT License](http://www.opensource.org/licenses/MIT)
