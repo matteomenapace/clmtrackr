@@ -1,13 +1,14 @@
-clmtrackr
-======
+# FaceTracker
+
+Forked from Auduno's [clmtrackr](https://github.com/auduno/clmtrackr)
 
 ![sad face](https://raw.githubusercontent.com/CodeAndCake/AppsFromScratch/v2/sessions/05/assets/sad-face.png)
 
-**clmtrackr** is a javascript library for fitting facial models to faces in videos or images. It currently is an implementation of *constrained local models* fitted by *regularized landmark mean-shift*, as described in [Jason M. Saragih's paper](http://dl.acm.org/citation.cfm?id=1938021). **clmtrackr** tracks a face and outputs the coordinate positions of the face model as an array, following the numbering of the model below:
+**FaceTracker** is a JavaScript library for fitting facial models to faces in videos or images. It currently is an implementation of *constrained local models* fitted by *regularized landmark mean-shift*, as described in [Jason M. Saragih's paper](http://dl.acm.org/citation.cfm?id=1938021). **FaceTracker** tracks a face and outputs the coordinate positions of the face model as an array, following the numbering of the model below:
 
-[![facemodel_numbering](https://matteomenapace.github.io/clmtrackr/media/facemodel_numbering_new_small.png)](https://matteomenapace.github.io/clmtrackr/media/facemodel_numbering_new.png)
+[![facemodel_numbering](https://matteomenapace.github.io/FaceTracker/media/facemodel_numbering_new_small.png)](https://matteomenapace.github.io/FaceTracker/media/facemodel_numbering_new.png)
 
-[Reference](https://matteomenapace.github.io/clmtrackr/docs/reference.html) - [Overview](http://auduno.tumblr.com/post/61888277175/fitting-faces)
+[Reference](https://matteomenapace.github.io/FaceTracker/docs/reference.html) - [Overview](http://auduno.tumblr.com/post/61888277175/fitting-faces)
 
 The library provides some generic face models that were trained on [the MUCT database](http://www.milbo.org/muct/) and some additional self-annotated images. Check out [clmtools](https://github.com/auduno/clmtools) for building your own models.
 
@@ -19,25 +20,25 @@ For some more information about Constrained Local Models, take a look at Xiaogua
 
 ### Examples ###
 
-* [Tracking in image](https://matteomenapace.github.io/clmtrackr/clm_image.html)
-* [Tracking in video](https://matteomenapace.github.io/clmtrackr/clm_video.html)
-* [Face substitution](https://matteomenapace.github.io/clmtrackr/examples/facesubstitution.html)
-* [Face masking](https://matteomenapace.github.io/clmtrackr/face_mask.html)
-* [Realtime face deformation](https://matteomenapace.github.io/clmtrackr/examples/facedeform.html)
-* [Emotion detection](https://matteomenapace.github.io/clmtrackr/examples/clm_emotiondetection.html)
-* [Caricature](https://matteomenapace.github.io/clmtrackr/examples/caricature.html)
+* [Tracking in image](https://matteomenapace.github.io/FaceTracker/clm_image.html)
+* [Tracking in video](https://matteomenapace.github.io/FaceTracker/clm_video.html)
+* [Face substitution](https://matteomenapace.github.io/FaceTracker/examples/facesubstitution.html)
+* [Face masking](https://matteomenapace.github.io/FaceTracker/face_mask.html)
+* [Realtime face deformation](https://matteomenapace.github.io/FaceTracker/examples/facedeform.html)
+* [Emotion detection](https://matteomenapace.github.io/FaceTracker/examples/clm_emotiondetection.html)
+* [Caricature](https://matteomenapace.github.io/FaceTracker/examples/caricature.html)
 
 ### Usage ###
 
-Download the minified library [clmtrackr.js](https://github.com/auduno/clmtrackr/raw/dev/clmtrackr.js) and one of the models, and include them in your webpage. **clmtrackr** depends on [*numeric.js*](https://github.com/sloisel/numeric/) and [*jsfeat.js*](https://github.com/inspirit/jsfeat), but these are included in the minified library.
+Download the minified library [FaceTracker.js](https://github.com/matteomenapace/FaceTracker/raw/dev/clmtrackr.js) and one of the models, and include them in your webpage. **FaceTracker** depends on [*numeric.js*](https://github.com/sloisel/numeric/) and [*jsfeat.js*](https://github.com/inspirit/jsfeat), but these are included in the minified library.
 
 ```html
-/* clmtrackr libraries */
+/* FaceTracker libraries */
 <script src="js/clmtrackr.js"></script>
 <script src="js/model_pca_20_svm.js"></script>
 ```
 
-The following code initiates the clmtrackr with the model we included, and starts the tracker running on a video element.
+The following code initiates the FaceTracker with the model we included, and starts the tracker running on a video element.
 
 ```html
 <video id="inputVideo" width="400" height="300" autoplay loop>
@@ -52,7 +53,7 @@ The following code initiates the clmtrackr with the model we included, and start
 </script>
 ```
 
-You can now get the positions of the tracked facial features as an array via ```getCurrentPosition()```:
+You can now get the positions of the tracked facial features as an array via `getCurrentPosition()`:
 
 ```html
 <script type="text/javascript">
@@ -66,7 +67,7 @@ You can now get the positions of the tracked facial features as an array via ```
 </script>
 ```
 
-You can also use the built in function ```draw()``` to draw the tracked facial model on a canvas :
+You can also use the built in function `draw()` to draw the tracked facial model on a canvas :
 
 ```html
 <canvas id="drawCanvas" width="400" height="300"></canvas>
@@ -82,11 +83,11 @@ You can also use the built in function ```draw()``` to draw the tracked facial m
 </script>
 ```
 
-See the complete example [here](https://matteomenapace.github.com/clmtrackr/example.html).
+See the complete example [here](https://matteomenapace.github.com/FaceTracker/example.html).
 
 ### Inspiring forks
 
-- https://github.com/DraXus/clmtrackr implemented a feature to manually select the _face box_.
+- https://github.com/DraXus/clmtracker implemented a feature to manually select the _face box_.
 
 ### Potential issues
 
@@ -96,4 +97,4 @@ See the complete example [here](https://matteomenapace.github.com/clmtrackr/exam
 
 ### License ###
 
-**clmtrackr** is distributed under the [MIT License](http://www.opensource.org/licenses/MIT)
+**FaceTracker** is distributed under the [MIT License](http://www.opensource.org/licenses/MIT)
